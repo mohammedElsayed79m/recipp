@@ -1,0 +1,156 @@
+/* www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata */
+/* www.themealdb.com/api/json/v1/1/lookup.php?i=52772 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+main{
+    display: flex;
+    justify-content: flex-end;
+}
+.search-area .details{
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    width: 40%;
+    background-color: rgb(10, 141, 212);
+    opacity: 0;
+    visibility: hidden;
+    transition:  All 0.3s;
+    z-index: -1;
+}
+@media(max-width:800px){
+    .search-area .details{
+        width: 100%;
+    }
+    .details.show{
+        opacity: 1;
+        z-index: 1;
+        visibility: visible;
+    }
+}
+.details.show{
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+}
+.search-area .details i{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: #eee;
+    color: black;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.search-area .details i:hover{
+    opacity: 0.9;
+}
+.search-area .details h2{
+    margin-top: 40px;
+}
+.search-area .details > * {
+    margin-bottom: 30px;
+}
+
+.search-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    left: 0;
+    position: fixed;
+    padding: 10px;
+    height: 100vh;
+    background-color: rgb(10, 141, 212);
+}
+
+@media(max-width:800px){
+    .search-area .search-inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .search-area .search-inner input{
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+}
+.search-area h2{
+    color: white;
+    margin-bottom: 20px;
+}
+.search-area input , .search-area button{
+    border: 0;
+    padding: 10px;
+    font-size: 19px;
+    outline: 0;
+}
+.search-area button{
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+main .result-area{
+    padding: 10px;
+    width: 60%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+}
+.card{
+    width: 48%;
+    background-color: #eee;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 1px rgb(189, 186, 186) 
+                ,-1px -1px 7px 0px rgb(159, 157, 157);
+}
+@media(max-width:800px){
+    .card{
+        flex: 100%;
+    }
+}
+
+img{
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.card .card-info{
+    padding: 20px 0;
+    text-align: center;
+}
+ a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+    margin: 10px auto;
+    cursor: pointer;
+    display: block;
+    width: 50%;
+    /* border-radius: 15px; */
+    transition: 0.3s;
+    text-align: center;
+}
+ a:hover{
+    background-color: black;
+}
